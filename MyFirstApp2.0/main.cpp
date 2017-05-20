@@ -51,7 +51,7 @@ int main()
     int skelletonArmor = 2;
     float skelletonMissRate = 0.2f ;
     
-    int round = 0;
+    int round = 1;
     
     cout << "battle start\n";
     while (humans  >= 1 && skelletons >= 1) {    //loop till one team has 0 left
@@ -65,7 +65,7 @@ int main()
             int initiative = 1;
             float attack = 1.0f;
             
-            cout << "Round " << round + 1 << " start!\n";
+            cout << "Round " << round << " start!\n";
             
             initiative = diceRoll (randomGenerator);
             
@@ -114,13 +114,18 @@ int main()
             
             //check for casualty and substract from total
             
-            if (humanHealth <= 0 && humans > 0) {
-                humanHealth = 500;
-                humans = humans - 1;
+            if (humanHealth <= 0) {
+                humans--;
+                if (humans > 0) {
+                    humanHealth = 500;
+                }
             }
-            if (skelletonHealth <= 0 && skelletons > 0){
+            if (skelletonHealth <= 0){
+                skelletons--;
+                if (skelletons > 0) {
                 skelletonHealth = 150;
-                skelletons = skelletons - 1;
+                }
+
             }
             round ++;
             cout << "there are " << humans << " humans and " << skelletons << " skelletons remaining.\n";

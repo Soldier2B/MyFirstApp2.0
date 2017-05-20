@@ -16,8 +16,14 @@ int main()
     int skelletons;
     int humans;
     
+    unsigned int tiempo;
+    
+    tiempo = (unsigned int) time (NULL);
+    
+    cout << tiempo << endl;
+    
     //random number things
-    mt19937 randomGenerator (time_t (0));
+    mt19937 randomGenerator (tiempo);
     uniform_int_distribution<int> diceRoll (1, 6);
     uniform_real_distribution<float> attackRoll (0.0f, 1.0f);
     
@@ -109,7 +115,7 @@ int main()
                     
                 }
                 
-                cout << "humanHealth " << humanHealth << "skelletonHealth " << skelletonHealth << endl;
+                cout << "humanHealth " << humanHealth << " skelletonHealth " << skelletonHealth << endl;
             }
             
             //check for casualty and substract from total
@@ -147,7 +153,7 @@ int main()
         
     }
     
-    return 0;
+    exit (0);
     
 }
 

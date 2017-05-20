@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+# Xcode stuff
+MyFirstApp2.0.xcodeproj/*
+!MyFirstApp2.0.xcodeproj/project.pbxproj
+.DS_Store

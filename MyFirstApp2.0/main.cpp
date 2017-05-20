@@ -54,7 +54,7 @@ int main()
     int round = 0;
     
     cout << "battle start\n";
-    while (humans  != 0 || skelletons != 0) {    //loop till one team has 0 left
+    while (humans  >= 1 && skelletons >= 1) {    //loop till one team has 0 left
         
         
         //turn based fight
@@ -62,8 +62,8 @@ int main()
         while (humanHealth > 0 && skelletonHealth > 0) {    //loop till winner
             
             //iniciative roll
-            int initiative;
-            float attack;
+            int initiative = 1;
+            float attack = 1.0f;
             
             cout << "Round " << round + 1 << " start!\n";
             
@@ -134,7 +134,6 @@ int main()
     //outro
     //print results
     
-    cout << "there are " << humans << " humans and " << skelletons << " skelletons remaining.\n";
     
     if (humans > 0) {
         cout << "Humans have won!\n";

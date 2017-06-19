@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A797A3DB1EF4EB420091E488 /* main2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A797A3D91EF4EB420091E488 /* main2.cpp */; };
+		A7C95B741EF8926F000D4F40 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A7C95B721EF8926F000D4F40 /* Player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		A797A3D91EF4EB420091E488 /* main2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main2.cpp; sourceTree = "<group>"; };
 		A7A79E851ED0ECEA00ABA1DD /* MyFirstApp2.0 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyFirstApp2.0; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7C95B721EF8926F000D4F40 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../Player.cpp; sourceTree = "<group>"; };
+		A7C95B731EF8926F000D4F40 /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Player.hpp; path = ../Player.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,8 @@
 		A7A79E871ED0ECEA00ABA1DD /* MyFirstApp2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				A7C95B721EF8926F000D4F40 /* Player.cpp */,
+				A7C95B731EF8926F000D4F40 /* Player.hpp */,
 				A797A3D91EF4EB420091E488 /* main2.cpp */,
 			);
 			path = MyFirstApp2.0;
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C95B741EF8926F000D4F40 /* Player.cpp in Sources */,
 				A797A3DB1EF4EB420091E488 /* main2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

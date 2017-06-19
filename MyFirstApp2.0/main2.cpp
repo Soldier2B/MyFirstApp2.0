@@ -197,8 +197,6 @@ string getClass () {
     //Defend
 
 
-
-
 //Input Validation
 
 

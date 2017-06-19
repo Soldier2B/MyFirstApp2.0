@@ -1,47 +1,4 @@
 
-// diagramar programa
-
-// name or something something
-// select character or something
-
-// funcion validar
-
-// programacion defensiva
-// input validation
-
-// chequeas q no esta en blanco
-
-// chequeo minimo
-
-// chequeas si es numerico
-// chequeas que ese numero sea positivo
-// else lo que queres q pase
-
-// ideas para pelea
-// elegir spell o attack, a partir de una lista y usar numeros de referencia
-
-
-//funciones
-
-//intro
-//selec race
-//validation
-//start adventure
-//what to do
-//validation
-//encounter
-//battle
-//battle - select attack
-//validation
-//battle - select defense
-//validation
-//get exp
-//what to do
-//game ends
-
-//what to do - use exp, move, otros
-
-
 
 #include <iostream>
 #include <string>
@@ -56,12 +13,73 @@ using namespace std;
 
 string getClass();
 
+//Classes
+
+class Player {
+    
+public:
+    
+    void setStartingStats (string playerClass) {
+        
+        if (playerClass == "Mage") {
+            _playerHealth = 200;
+            _playerDamage = 10;
+            _playerMagicDmg = 50;
+            _playerAccuracy = 0;
+            _playerArmor = 0;
+            _playerMagicDef = 0;
+            
+        }
+        
+        if (playerClass == "Warrior") {
+            _playerHealth = 300;
+            _playerDamage = 0;
+            _playerMagicDmg = 0;
+            _playerAccuracy = 0;
+            _playerArmor = 0.0;
+            _playerMagicDef = 0;
+            
+        }
+        
+    }
+    
+    int Attack () {
+        int damageDealt = 0;
+        return damageDealt;
+    }
+    int Defend () {
+        int damageMitigation = 0;
+        return damageMitigation;
+        
+    }
+    int useExp () {
+        int remainingExp = 0;
+        return remainingExp;
+    }
+    
+private:
+    int _playerHealth;
+    int _playerDamage;
+    int _playerMagicDmg;
+    float _playerAccuracy;
+    int _playerArmor;
+    int _playerMagicDef;
+    
+};
+
+
 //Main
 
 int main () {
     
     string playerClass;
     playerClass = getClass ();
+    
+    Player player1;
+    player1.setStartingStats(playerClass);
+    
+    
+
 
     
     
@@ -104,49 +122,6 @@ string getClass () {
     
 }
 
-//Set starting stats
-
-/* int getplayerStats (string playerClass) {
-    
-    int playerHealth;
-    int playerDamage;
-    int playerMagicDmg;
-    int playerAccuracy;
-    int playerArmor;
-    int playerMagicDef;
-
-    if (playerClass == "Mage") {
-        playerHealth = 200;
-        playerDamage = 10;
-        playerMagicDmg = 50;
-        playerAccuracy =
-        playerArmor =
-        playerMagicDef =
-        
-    }
-    
-    if (playerClass == "Warrior") {
-        playerHealth =
-        playerDamage =
-        playerMagicDmg =
-        playerAccuracy =
-        playerArmor =
-        playerMagicDef =
-        
-    }
-    
-    return playerHealth, playerDamage, playerMagicDmg, playerAccuracy, playerArmor, playerMagicDef;
-    
-}
-
-*/
-
-//int getClassStats () {
-    
-    
-//    return health, damage, magicDmg, accuracy, armor, magicDefence;
-    
-//}
 
 //Actions Menu
 
@@ -198,6 +173,15 @@ string getClass () {
 
 
 //Input Validation
+    // programacion defensiva
+
+    // chequeas q no esta en blanco
+
+    // chequeo minimo
+
+    // chequeas si es numerico
+    // chequeas que ese numero sea positivo
+    // else lo que queres q pase
 
 
 //Game Over

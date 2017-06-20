@@ -1,23 +1,34 @@
-//
-//  Player.hpp
-//  MyFirstApp2.0
-//
-//  Created by Oliver Klein on 6/19/17.
-//  Copyright © 2017 Oliver Klein. All rights reserved.
-//
 
 #ifndef Player_hpp
 #define Player_hpp
+#include <string>
 
-#include <stdio.h>
+using namespace std;
 
 class Player {
+    
+    int _playerHealth;
+    int _playerDamage;
+    int _playerMagicDmg;
+    float _playerAccuracy;
+    int _playerArmor;
+    int _playerMagicDef;
+    float _playerSpeed;
+    
 public:
     Player();
+    void setStartingStats (string playerClass);
+    
     
 };
 
 
+
+
+    
+
+
+    
 
 
 #endif /* Player_hpp */

@@ -1,20 +1,18 @@
-//
-//  Player.cpp
-//  MyFirstApp2.0
-//
-//  Created by Oliver Klein on 6/19/17.
-//  Copyright © 2017 Oliver Klein. All rights reserved.
-//
 
 #include "Player.hpp"
+#include <stdio.h>
+#include <string>
+#include <iostream>
+
+using namespace std;
 
 Player::Player() {
     
-public:
+};
     
     // player starting stats setter
     
-    void setStartingStats (string playerClass) {
+void Player::setStartingStats (string playerClass) {
         
         if (playerClass == "Mage") {
             _playerHealth = 200;
@@ -44,7 +42,7 @@ public:
         }
         
     }
-    
+/*
     // In-Game stat setters
     
     void setPlayerHealth (int playerHealth) {
@@ -119,3 +117,27 @@ private:
     float _playerSpeed;
     
 };
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

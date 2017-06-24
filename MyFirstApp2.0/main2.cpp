@@ -44,28 +44,27 @@ string getClass (string playerClass) {
 
     int selectClass;
 
-    while (selectClass <> 1 && selectClass <> 2) {
+    do {
 
         cout << "Select what class you want to play.\n";
-        cout << "{1} Mage \n{2} Warrior \n{3} More Info\n";
+        cout << "{1} Mage {2} Warrior {3} More Info\n";
         cin >> selectClass;
         //if selectClass = 2 warrior
         //if selectClass = 1 mage
         if (selectClass == 1) {
             playerClass = "Mage";
-            unselected = false;
+
 
         } else if (selectClass == 2) {
             playerClass = "Warrior";
-            unselected = false;
 
         } else if (selectClass == 3) {
             cout << "Warriors are the best, pick them.\n";
 
         } else {
-            cout << "** Select a valid option (1, 2 or 3) **\n"
+            cout << "** Select a valid option (1, 2 or 3) **\n";
         }
-    }
+    } while (selectClass != 1 && selectClass != 2);
 
     cout << "Player selected " << playerClass << endl;
 

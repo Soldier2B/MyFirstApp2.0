@@ -22,16 +22,13 @@ string getClass(string playerClass);
 
 int main () {
     
-    string playerClass = "unselected";
+    string playerClass;
     playerClass = getClass (playerClass);
     
     Player player1;
     player1.setStartingStats(playerClass);
     
     
-    
-
-
     
     
     
@@ -50,8 +47,9 @@ int main () {
 string getClass (string playerClass) {
     
     int selectClass;
+    bool unselected = true;
     
-    while (playerClass == "unselected") {
+    while (unselected == true) {
     
         cout << "Select what class you want to play.\n";
         cout << "{1} Mage  {2} Warrior {3} More Info\n";
@@ -60,12 +58,14 @@ string getClass (string playerClass) {
         //if selectClass = 1 mage
         if (selectClass == 1) {
             playerClass = "Mage";
+            unselected = false;
         }
     
         //if selectClass = 2 warrior
     
         if (selectClass == 2){
             playerClass = "Warrior";
+            unselected = false;
         }
     
         if (selectClass == 3) {

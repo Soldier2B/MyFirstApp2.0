@@ -21,23 +21,19 @@ string getClass(string playerClass);
 //Main
 
 int main () {
-    
+
     string playerClass;
     playerClass = getClass (playerClass);
-    
+
     Player player1;
     player1.setStartingStats(playerClass);
-    
-    
-    
-    
-    
+
     exit (0);
 }
 
-
-
-//Functions
+/*
+ Functions ==================================================
+*/
 
 //Intro
 
@@ -45,38 +41,36 @@ int main () {
 //Select class
 
 string getClass (string playerClass) {
-    
+
     int selectClass;
-    bool unselected = true;
-    
-    while (unselected == true) {
-    
+
+    while (selectClass <> 1 && selectClass <> 2) {
+
         cout << "Select what class you want to play.\n";
-        cout << "{1} Mage  {2} Warrior {3} More Info\n";
+        cout << "{1} Mage \n{2} Warrior \n{3} More Info\n";
         cin >> selectClass;
-    
+        //if selectClass = 2 warrior
         //if selectClass = 1 mage
         if (selectClass == 1) {
             playerClass = "Mage";
             unselected = false;
-        }
-    
-        //if selectClass = 2 warrior
-    
-        if (selectClass == 2){
+
+        } else if (selectClass == 2) {
             playerClass = "Warrior";
             unselected = false;
-        }
-    
-        if (selectClass == 3) {
+
+        } else if (selectClass == 3) {
             cout << "Warriors are the best, pick them.\n";
+
+        } else {
+            cout << "** Select a valid option (1, 2 or 3) **\n"
         }
     }
-    
+
     cout << "Player selected " << playerClass << endl;
-    
+
     return playerClass;
-    
+
 }
 
 

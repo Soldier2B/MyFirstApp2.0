@@ -18,7 +18,7 @@ class Player {
 public:
     Player();
     void setStartingStats (string playerClass);
-    
+    int getDmgDealt ();
     
 };
 

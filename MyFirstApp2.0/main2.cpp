@@ -11,7 +11,7 @@ using namespace std;
 
 //Forward Declarations
 
-string getClass(string playerClass);
+string GetClass(string playerClass);
 
 //Classes
 
@@ -21,12 +21,14 @@ string getClass(string playerClass);
 //Main
 
 int main () {
-
+    
     string playerClass;
-    playerClass = getClass (playerClass);
+    playerClass = GetClass (playerClass);
 
     Player player1;
     player1.setStartingStats(playerClass);
+    
+    player1.getDmgDealt();
 
     exit (0);
 }
@@ -40,35 +42,35 @@ int main () {
 
 //Select class
 
-string getClass (string playerClass) {
+string GetClass (string player_class) {
 
-    int selectClass;
+    int select_class;
 
     do {
 
         cout << "Select what class you want to play.\n";
         cout << "{1} Mage {2} Warrior {3} More Info\n";
-        cin >> selectClass;
+        cin >> select_class;
         //if selectClass = 2 warrior
         //if selectClass = 1 mage
-        if (selectClass == 1) {
-            playerClass = "Mage";
+        if (select_class == 1) {
+            player_class = "Mage";
 
 
-        } else if (selectClass == 2) {
-            playerClass = "Warrior";
+        } else if (select_class == 2) {
+            player_class = "Warrior";
 
-        } else if (selectClass == 3) {
+        } else if (select_class == 3) {
             cout << "Warriors are the best, pick them.\n";
 
         } else {
             cout << "** Select a valid option (1, 2 or 3) **\n";
         }
-    } while (selectClass != 1 && selectClass != 2);
+    } while (select_class != 1 && select_class != 2);
 
-    cout << "Player selected " << playerClass << endl;
+    cout << "Player selected " << player_class << endl;
 
-    return playerClass;
+    return player_class;
 
 }
 
@@ -121,7 +123,7 @@ string getClass (string playerClass) {
 //Enemy Types
 
     //fight robot
-    //fight bigRobot
+    //fight big_robot
 
 //Battle actions
 

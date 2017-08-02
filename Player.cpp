@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string>
 #include <iostream>
+#include "Common.hpp"
 
 using namespace std;
 
@@ -42,6 +43,27 @@ void Player::setStartingStats (string playerClass) {
         }
         
     }
+
+int Player::getDmgDealt () {
+    
+    int damageDealt = 0;
+    float accuracy;
+    accuracy = getAccuracyRoll (0.0f, 5.0f);
+    
+    cout << accuracy;
+ 
+    if (accuracy > _playerAccuracy) {
+        damageDealt = _playerDamage;
+        return damageDealt;
+    } else {
+        return damageDealt;
+        }
+    
+}
+
+
+
+
 /*
     // In-Game stat setters
     
